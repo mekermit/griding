@@ -218,7 +218,7 @@ main{
     }
 
     .ix{
-        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .itemsection .ix span{
