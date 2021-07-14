@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+
+a img, .viii img{
+    width: 150px;
+}
+
+button{
+    color: white;
+    background-color: #e76e55;
+    box-shadow: 3px 3px #b03e36;
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #b03e36;
+    transform: translateY(3px);
+}
+
+.header{
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #92cc41;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img, button{
+    margin: 10px 20px;
+}
+
+.footer{
+    margin-top: 10px;
+    background-color: #92cc41;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer img, span{
+    margin: 10px 20px;
+}
+
+span{
+    font-weight: bold;
+    color: white;
+}
+
+.itemsection div span, .itemsection div a{
+    font-size: 2rem;
+}
+
+main{
+    display: flex;
+}
+
+.itemsection{
+    justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+    "i ii iii iii"
+    "iv v vi ix"
+    "vii viii viii ix";
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+}
+
+.itemsection div{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all .2s ease-in-out;
+}
+
+.itemsection div:hover{
+    transform: scale(1.25, 1.25);
+}
+
+.itemsection div h2{
+    text-align: center;
+}
+
+.i{
+    grid-area: i;
+    background-color: #ffffff;
+}
+
+.ii{
+    grid-area: ii;
+    background-color: #2c2c2c;
+}
+
+.iii{
+    grid-area: iii;
+    background-color: #f7f8f9;
+}
+
+.iv{
+    grid-area: iv;
+    background-color: #ee5637;
+}
+
+.v{
+    grid-area: v;
+    background-color: #ffffff;
+}
+
+.vi{
+    grid-area: vi;
+    background-color: #ffffff;
+}
+
+.vii{
+    grid-area: vii;
+    background-color: #f7f8f9;
+}
+
+.viii{
+    grid-area: viii;
+    background-color: #93b6b7;
+}
+
+.ix{
+    grid-area: ix;
+    background-color: #8f76bc;
+}
+
+.i a, .ii a, .iii a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px #2c2c2c;
+    position: absolute;
+}
+
+.v span, .vi span, .vii span{
+    text-align: center;
+    color: black;
+    text-shadow: 3px 3px #a5a5a5;
+}
+
+.iv span, .viii span, .ix span{
+    text-align: center;
+    text-shadow: 3px 3px #a5a5a5;
+}
+
+.ix p{
+    text-align: center;
+    font-size: .95rem;
+    color: white;
+}
+
+@media screen and (max-width: 320px){
+    *{
+        font-size: 10px;
+    }
+
+    .header{
+        height: 70px;
+    }
+
+    .header img{
+        width: 55px;
+    }
+
+    .footer{
+        height: 70px;
+    }
+
+    .footer img{
+        width: 55px;
+    }
+
+   .itemsection{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-areas:
+        "i ii" 
+        "iii iii"
+        "iv v"
+        "vi vii"
+        "viii viii"
+        "ix ix";
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 150px 150px 150px 150px 150px 150px;
+    }
+
+    .itemsection div{
+        padding: 10px;
+    }
+
+    .i img, .ii img{
+        width: 150px;
+    }
+
+    .iii img{
+        width: 305px;
+    }
+
+    a img, .viii img{
+        width: 75px;
+    }
+
+    .ix{
+        flex-direction: row;
+    }
+
+    .itemsection .ix span{
+        font-size: 1.2rem;
+        margin: 10px;
+        width: 120px;
+    }
+
+    .itemsection .ix p{
+        font-size: .9rem;
+        text-align: center;
+        width: 120px;
+    }
+
+    .itemsection .ix button{
+        margin: 10px;
+    }
+
+    .itemsection div:hover{
+        transform: scale(1, 1);
+    }
+}
